@@ -20,6 +20,7 @@ public class PacemakerRestService
   public void listUsers(Context ctx)
   {
     ctx.json(pacemaker.getUsers());
+    System.out.println("list users requested");
   }
 
   public void createUser(Context ctx)
