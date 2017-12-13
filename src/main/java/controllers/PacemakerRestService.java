@@ -112,4 +112,16 @@ public class PacemakerRestService
       ctx.status(404);
     }
   }
+
+  public void deletetUser(Context ctx)
+  {
+    String id = ctx.param("id");
+    ctx.json(pacemaker.deleteUser(id));
+  }
+
+  public void deleteUsers(Context ctx)
+  {
+    pacemaker.deleteUsers();
+    ctx.json(204);
+  }
 }

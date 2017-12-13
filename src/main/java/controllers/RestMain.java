@@ -46,5 +46,13 @@ public class RestMain
     app.post("/users/:id/activities", ctx -> {
       service.createActivity(ctx);
     });
+
+    app.delete("/users", ctx -> {
+      service.deleteUsers(ctx);
+    });
+
+    app.delete("/users/:id", ctx -> {
+      service.deletetUser(ctx);
+    });
   }
 }
