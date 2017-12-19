@@ -10,17 +10,11 @@ import com.google.common.base.Objects;
 public class Location implements Serializable
 {
 
-  public String id;
   public double longitude;
   public double latitude;
 
   public Location()
   {
-  }
-
-  public String getId()
-  {
-    return id;
   }
 
   public double getLongitude()
@@ -35,7 +29,6 @@ public class Location implements Serializable
 
   public Location(double latitude, double longitude)
   {
-    this.id = UUID.randomUUID().toString();
     this.latitude = latitude;
     this.longitude = longitude;
   }
@@ -57,12 +50,12 @@ public class Location implements Serializable
   @Override
   public String toString()
   {
-    return toStringHelper(this).addValue(id).addValue(latitude).addValue(longitude).toString();
+    return toStringHelper(this).addValue(latitude).addValue(longitude).toString();
   }
 
   @Override
   public int hashCode()
   {
-    return Objects.hashCode(this.id, this.latitude, this.longitude);
+    return Objects.hashCode(this.latitude, this.longitude);
   }
 }
