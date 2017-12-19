@@ -2,3 +2,4 @@
 /heroku.bat
 /mvn coverageReport.bat
 /mvn package.bat
+/mvn heroku.bat

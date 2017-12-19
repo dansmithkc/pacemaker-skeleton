@@ -124,4 +124,11 @@ public class PacemakerRestService
     pacemaker.deleteUsers();
     ctx.json(204);
   }
+
+  public void deleteActivities(Context ctx)
+  {
+    String id = ctx.param("id");
+    pacemaker.deleteActivities(id);
+    ctx.json(204);
+  }
 }
