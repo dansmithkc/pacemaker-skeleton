@@ -113,7 +113,7 @@ public class PacemakerRestService
     }
   }
 
-  public void deletetUser(Context ctx)
+  public void deleteUser(Context ctx)
   {
     String id = ctx.param("id");
     ctx.json(pacemaker.deleteUser(id));

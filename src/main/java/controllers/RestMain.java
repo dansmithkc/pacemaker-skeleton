@@ -64,7 +64,7 @@ public class RestMain
     });
 
     app.delete("/users/:id", ctx -> {
-      service.deletetUser(ctx);
+      service.deleteUser(ctx);
     });
 
     app.delete("/users/:id/activities", ctx -> {
